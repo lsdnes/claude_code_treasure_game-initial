@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(netstat -ano)",
+      "Bash(node server.js)",
+      "Bash(curl -s -X POST http://localhost:3001/api/signup -H \"Content-Type: application/json\" -d '{\"username\":\"testuser\",\"password\":\"testpass\"}')",
+      "Bash(curl -s -X POST http://localhost:3001/api/signin -H \"Content-Type: application/json\" -d '{\"username\":\"testuser\",\"password\":\"testpass\"}')",
+      "Bash(findstr :3001)",
+      "Bash(xargs -I{} taskkill /PID {} /F)",
+      "Bash(findstr \":3001 \")",
+      "Bash(taskkill /PID 24964 /F)",
+      "Bash(gh auth:*)",
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(git -C \"C:/Users/StanleyLiu/claude_code_project_demo/claude_code_treasure_game-initial\" remote -v)",
+      "Bash(mkdir -p /c/Users/StanleyLiu/bin)",
+      "Bash(cp \"/c/Users/StanleyLiu/AppData/Local/Temp/gh_extracted/bin/gh.exe\" \"/c/Users/StanleyLiu/bin/gh.exe\")",
+      "Bash(/c/Users/StanleyLiu/bin/gh.exe --version)"
+    ]
+  }
+}
